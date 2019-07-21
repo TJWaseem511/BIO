@@ -1,0 +1,16 @@
+<div class="p-2 border rounded" [ngStyle]="{backgroundColor: color}">
+  <div>
+    <h6 class="float-left"><strong>{{"Order# "+order.orderId}}</strong></h6>
+    <h6 class="float-right"><strong>{{order.customer_name}}</strong></h6>
+  </div>
+  <br>
+  <div>
+    <hr>
+    <h5>{{order.item_selected}}</h5>
+  </div>
+</div>
+
+
+<!-- <strong>{{"Order# "+order.orderId}}</strong>&nbsp;&nbsp;
+<span>{{"Item: "+order.item_selected}}</span>
+ -->

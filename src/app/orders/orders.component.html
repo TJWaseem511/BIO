@@ -1,0 +1,48 @@
+<div class="row">
+    <hr>
+  <!--HTML code for Queued Order-->
+  <div class="col-sm">
+    <h4>In the Queue</h4>
+    <hr>
+    <ul class="list-group">
+        <!--<a style="cursor: pointer" ><li class="list-group-item" *ngFor="let order of Q_Orders;" (click)="moveToProcessing(order)">{{"Order# "+order.orderId}}</li></a>-->
+        <li class="list-group-item border-0" *ngFor="let order of Q_Orders;" (click)="moveToProcessing(order)">
+          <a style="cursor: pointer">
+            <order [order]="order" color="lightblue"></order>
+          </a>
+        </li>
+    </ul>
+    <hr>
+  </div>
+
+  <!--HTML code for Mixing Order-->
+  <div class="col-sm">
+    <h4>Being Mixed</h4>
+    <hr>
+    <ul class="list-group">
+        <li class="list-group-item border-0" *ngFor="let order of P_Orders;" (click)="moveToCompleted(order)">
+          <a style="cursor: pointer">
+            <order [order]="order" color="burlywood"></order>
+          </a>
+        </li>
+    </ul>
+    <hr>
+  </div>
+
+
+  <!--HTML code for Completed Order-->
+  <div class="col-sm">
+    <h4>Ready to collect</h4>
+    <hr>
+    <ul class="list-group">
+        <li class="list-group-item border-0" *ngFor="let order of C_Orders;" (click)="done(order)">
+          <a style="cursor: pointer" >
+            <order [order]="order" color="lightgreen"></order>
+          </a>
+        </li>
+    </ul>
+    <hr>
+  </div>
+
+  <!--Wrapper Div ends here-->
+</div>
