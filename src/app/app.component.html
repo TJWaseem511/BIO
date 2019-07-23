@@ -1,20 +1,24 @@
 <!-- Below div holds the whole application-->
-<div class="container-fluid" style="text-align: center;">
+<div class="container-fluid" style="text-align: center; background-color: black; color: yellowgreen" >
   <!-- Div below holds the header-->
-  <hr>
-  <div class="row">
+  <div class="row p-2 border-bottom border-white mx-2">
     <div class="col">
-      <h1>Welcome to B!O</h1>
+      <h1 class="my-2">Welcome to B!O</h1>
     </div>
   </div>
   <!-- Div below holds both the Bevrage menu & The orders display-->
-  <hr>
-  <div class="row mx-1">
+  <div class="row mx-1 mt-2">
     <div class="col-sm-3">
         <app-bev-menu></app-bev-menu>
     </div>
     <div class="col-sm">
+      <div>
+        <h3>Beverage Queue</h3>
+        <hr class="border-white border-bottom">
+      </div>
+      <div>
         <app-orders></app-orders>
+      </div>
     </div>
   </div>
 </div>

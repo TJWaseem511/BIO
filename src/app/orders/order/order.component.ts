@@ -9,7 +9,7 @@ import { Order } from 'src/app/model/order.model';
 export class OrderComponent implements OnInit {
 
   @Input() order: Order;
-  @Input() color: String;
+
   constructor() { }
 
   ngOnInit() {
